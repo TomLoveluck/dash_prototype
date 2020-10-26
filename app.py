@@ -11,7 +11,7 @@ from jupyter_dash import JupyterDash
 
 # ------------------------------------------------------------------------------
 # Import and clean data (importing csv into pandas)
-df = pd.read_csv("app/intro_bees.csv")
+df = pd.read_csv("data/intro_bees.csv")
 
 states = df.State.unique()
 years = df.Year.unique()
@@ -27,9 +27,6 @@ grouped_df = (
     [['State', 'Year', 'Affected by', 'Pct of Colonies Impacted']]
 )
 
-
-test_png = 'red_logo.png'
-test_base64 = base64.b64encode(open(test_png, 'rb').read()).decode('ascii')
 
 # ------------------------------------------------------------------------------
 
